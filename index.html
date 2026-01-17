@@ -4,42 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sign Up Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&family=Twinkle+Star&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <img src="images/aurora.jpg">
-  <div>
-    <p>
-    This is not a real online service!
-    You know you need something like this in your life to help you
-    realize your deepest dreams. Sign up <em>now</em> to get started.
-    </p>
-    <p>You <em>know</em> you want to.</p>
+  <div class="image-container">
+    <img id="nebula" src="images/nebula-2.jpg">
+    <div class="logo-container">
+      <img id="odin" src="images/odin-lined.png">
+      <p>Stardust</p>
+    </div>
+    <div class="photo-credit">
+      <p class>Photo by <a href="https://unsplash.com/@aldebarans?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Aldebaran S</a> on <a href="https://unsplash.com/photos/blue-red-and-yellow-galaxy-zAm8YFpCCsc?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+      </p>
+    </div>
   </div>
-  <form action="example.com/path" method="post">
-    <section>
-      <h1>Let's do this!</h1>
-      <label for="firstname">FIRST NAME</label>
-        <input type="text" id="firstname" name="firstname">
-      <label for="lastname">LAST NAME</label>
-        <input type="text" id="lastname" name="lastname">
-      <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email">
-      <label for="phone">PHONE NUMBER</label>
-        <input type="tel" id="phone" name="phone">
-      <label for="pwd">PASSWORD</label>
-        <input type="password" id="pwd" name="password">
-      <label for="confirm_pwd">CONFIRM PASSWORD</label>
-        <input type="password" id="confirm_pwd" name="confirm_password"> 
-    </section>
-    <section>
+  <div class="sign-up-container">
+    <div class="intro-paragraph">
       <p>
-        <button type="submit">Create Account</button>
+      This is not a real online service!
+      You know you need something like this in your life to help you
+      realize your deepest dreams. Sign up <em>now</em> to get started.
       </p>
-      <p>
-        Already have an account?
-        <a href="www.google.com">Log in</a>
-      </p>
-    </section>
-  </form>
+      <p>You <em>know</em> you want to.</p>
+    </div>
+    <form action="example.com/path" method="post">
+      <section>
+        <h1>Let's do this!</h1>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="firstname">FIRST NAME</label>
+            <input type="text" 
+                  id="firstname" 
+                  name="firstname" 
+                  minlength="1" 
+                  placeholder="John" 
+                  required>
+          </div>
+          <div class="form-col">
+            <label for="lastname">LAST NAME</label>
+            <input type="text" 
+                  id="lastname" 
+                  name="lastname" 
+                  minlength="1" 
+                  placeholder="Smith" 
+                  required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="email">EMAIL</label>
+            <input type="email" 
+                  id="email" 
+                  name="email" 
+                  placeholder="Johnsmith@gmail.com" 
+                  required>
+          </div>
+          <div class="form-col">
+            <label for="phone">PHONE NUMBER</label>
+            <input type="tel" 
+                  id="phone" 
+                  name="phone" 
+                  placeholder="555-555-5555"
+                  pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                  required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-col">
+            <label for="pwd">PASSWORD</label>
+            <input type="password" 
+                  id="pwd" 
+                  name="password" 
+                  minlength="8"
+                  maxlength="20"
+                  placeholder="minimum 8 characters"
+                  required>
+          </div>
+          <div class="form-col">
+            <label for="confirm_pwd">CONFIRM PASSWORD</label>
+            <input type="password" 
+                  id="confirm_pwd" 
+                  name="confirm_password" 
+                  minlength="8"
+                  maxlength="20"
+                  required> 
+          </div>
+        </div>
+      </section>
+      <section>
+        <p>
+          <button type="submit">Create Account</button>
+        </p>
+        <p>
+          Already have an account?
+          <a href="www.google.com">Log in</a>
+        </p>
+      </section>
+    </form>
+  </div>
 </body>
 </html>
